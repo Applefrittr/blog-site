@@ -1,9 +1,10 @@
 .latest-card {
-  border: 1px solid black;
   background-color: white;
   display: grid;
   grid-template-columns: 2fr minmax(300px, 1fr);
   height: max-content;
+  border: 1px solid black;
+  min-width: 800px;
 }
 
 img {
@@ -16,6 +17,8 @@ img {
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
+  background-image: -moz-linear-gradient(90deg, white, gray);
+  background-image: linear-gradient(90deg, white, gray);
 }
 
 .title-text {

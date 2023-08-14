@@ -1,5 +1,5 @@
 .App {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -14,6 +14,7 @@
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
+  height: 8vh;
 }
 
 .nav-links {
@@ -41,6 +42,7 @@
   flex: 1;
   display: grid;
   grid-template-columns: 3fr minmax(400px, 1fr);
+  height: 92vh;
 }
 
 .latest-container {
@@ -51,6 +53,7 @@
 }
 
 .all-container {
-  background-color: lightgrey;
   padding: 2rem;
+  overflow: scroll;
+  position: relative;
 }
