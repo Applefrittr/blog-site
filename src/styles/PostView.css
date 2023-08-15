@@ -17,3 +17,41 @@
   justify-content: space-between;
   padding: 0.5rem;
 }
+
+.comments-element {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-start;
+  width: 80%;
+}
+
+.comments-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.display-comment-btn {
+  align-self: flex-start;
+}
+
+.comments-form {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.comments-buttons {
+  display: flex;
+  gap: 1rem;
+  align-self: flex-end;
+}
+
+.display {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}

@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "../styles/PostView.css";
+import Comments from "./Comments";
 
 function PostView(props) {
   const [post, setPost] = useState();
@@ -39,8 +40,10 @@ function PostView(props) {
             <hr></hr>
           </div>
           <p style={{ whiteSpace: "pre-wrap" }}>{post.text}</p>
+          <hr></hr>
         </div>
       )}
+      <Comments />
       <button className="nav-links" onClick={back}>
         Back
       </button>
