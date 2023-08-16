@@ -2,6 +2,7 @@ import Home from "./components/Home";
 import PostView from "./components/PostView";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Git from "./assets/gitWHITE.png";
 
 function App() {
   const [latestPost, setLatestPost] = useState();
@@ -47,19 +48,31 @@ function App() {
 
   return (
     <BrowserRouter>
-      <header className="nav-bar">
-        <h1>Movies in Frame</h1>
-        <button className="nav-links">Sign Up</button>
-      </header>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Home latestPost={latestPost} allPosts={allPosts} pic={pic} />
-          }
-        />
-        <Route path="/:id" element={<PostView />} />
-      </Routes>
+      <div className="App">
+        <header className="nav-bar">
+          <h1>Movies in Frame</h1>
+          <button className="nav-links">Sign Up</button>
+        </header>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home latestPost={latestPost} allPosts={allPosts} pic={pic} />
+            }
+          />
+          <Route path="/:id" element={<PostView />} />
+        </Routes>
+        <footer>
+          Created August 2023 by Applefrittr
+          <a
+            href="https://github.com/Applefrittr"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={Git} alt="GitHub Applefrittr" className="footer-img" />
+          </a>
+        </footer>
+      </div>
     </BrowserRouter>
   );
 }

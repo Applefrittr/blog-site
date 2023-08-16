@@ -6,6 +6,7 @@
   border: 1px solid black;
   background-image: -moz-linear-gradient(90deg, white, gray);
   background-image: linear-gradient(90deg, white, gray);
+  min-width: 350px;
 }
 
 .card-container {
@@ -18,4 +19,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (max-width: 1300px) {
+  .card-container {
+    flex-direction: row;
+    overflow: scroll;
+  }
 }

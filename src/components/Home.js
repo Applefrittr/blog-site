@@ -9,9 +9,12 @@ function Home(props) {
   };
 
   return (
-    <div className="App">
+    <div className="Home">
       <div className="content-container">
         <div className="latest-container">
+          <h2>
+            <i>Latest Post</i>
+          </h2>
           {props.latestPost && (
             <LatestPost
               truncate={truncateText}
@@ -21,6 +24,9 @@ function Home(props) {
           )}
         </div>
         <div className="all-container">
+          <h2>
+            <i>All Posts</i>
+          </h2>
           {props.allPosts && (
             <AllPosts truncate={truncateText} posts={props.allPosts} />
           )}
