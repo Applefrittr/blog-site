@@ -10,9 +10,12 @@ function PostView(props) {
 
   useEffect(() => {
     const getPost = async () => {
-      const request = await fetch(`http://localhost:3000/posts/${id}`, {
-        mode: "cors",
-      });
+      const request = await fetch(
+        `http://blog-api-production-4951.up.railway.app/posts/${id}`,
+        {
+          mode: "cors",
+        }
+      );
       const response = await request.json();
 
       setPost(response.post);

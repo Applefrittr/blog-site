@@ -13,9 +13,12 @@ function App() {
   useEffect(() => {
     // blog-API fetch request
     const fetchPosts = async () => {
-      const allPosts = await fetch("http://localhost:3000/posts", {
-        mode: "cors",
-      });
+      const allPosts = await fetch(
+        "http://blog-api-production-4951.up.railway.app/posts",
+        {
+          mode: "cors",
+        }
+      );
       const allPostsData = await allPosts.json();
 
       // filter out unpublished posts

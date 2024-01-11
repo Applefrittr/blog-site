@@ -11,7 +11,7 @@ function Comments() {
   useEffect(() => {
     const getComments = async () => {
       const request = await fetch(
-        `http://localhost:3000/posts/${id}/comments`,
+        `http://blog-api-production-4951.up.railway.app/posts/${id}/comments`,
         { mode: "cors", method: "GET" }
       );
 
@@ -47,14 +47,17 @@ function Comments() {
     const formData = new FormData(formRef.current);
     const dataObj = Object.fromEntries(formData.entries());
 
-    const request = await fetch(`http://localhost:3000/posts/${id}/comments`, {
-      method: "POST",
-      mode: "cors",
-      body: JSON.stringify(dataObj),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const request = await fetch(
+      `http://blog-api-production-4951.up.railway.app/posts/${id}/comments`,
+      {
+        method: "POST",
+        mode: "cors",
+        body: JSON.stringify(dataObj),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     const response = await request.json();
     console.log(response.message);
