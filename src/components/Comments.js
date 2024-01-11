@@ -11,7 +11,7 @@ function Comments() {
   useEffect(() => {
     const getComments = async () => {
       const request = await fetch(
-        `http://blog-api-production-4951.up.railway.app/posts/${id}/comments`,
+        `https://blog-api-production-4951.up.railway.app/posts/${id}/comments`,
         { mode: "cors", method: "GET" }
       );
 

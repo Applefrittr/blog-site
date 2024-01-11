@@ -14,7 +14,7 @@ function App() {
     // blog-API fetch request
     const fetchPosts = async () => {
       const allPosts = await fetch(
-        "http://blog-api-production-4951.up.railway.app/posts",
+        "https://blog-api-production-4951.up.railway.app/posts",
         {
           mode: "cors",
         }
