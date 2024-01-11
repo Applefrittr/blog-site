@@ -50,7 +50,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/blog-site">
       <div className="App">
         <header className="nav-bar">
           <h1>Movies in Frame</h1>
