@@ -48,7 +48,7 @@ function Comments() {
     const dataObj = Object.fromEntries(formData.entries());
 
     const request = await fetch(
-      `http://blog-api-production-4951.up.railway.app/posts/${id}/comments`,
+      `https://blog-api-production-4951.up.railway.app/posts/${id}/comments`,
       {
         method: "POST",
         mode: "cors",
